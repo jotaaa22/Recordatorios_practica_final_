@@ -1,0 +1,57 @@
+/* Diseño general */
+h1 {
+    color: #0099FF;
+  }
+  
+  /* Contenedor de cada mes */
+  .month-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+  }
+  
+  /* Encabezado de los meses */
+  .month-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Días de la semana */
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  /* Días del mes */
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day {
+    font-size: 0.85rem;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Fines de semana */
+  .saturday, .sunday {
+    color: #0099FF;
+    font-weight: bold;
+  }
+  
+  /* Días vacíos */
+  .empty {
+    background-color: transparent;
+    cursor: default;
+  }
