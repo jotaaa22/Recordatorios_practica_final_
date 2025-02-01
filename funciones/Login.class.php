@@ -20,11 +20,14 @@ class Login{
                 $_SESSION['email'] = $this->email;
                 $_SESSION['valido'] = true;
                 header('Location: inicio.php');
+                exit();
             }else{
                 header('Location: formulario_login.php');
+                exit();
             }
         }else{
             header('Location: formulario_login.php');
+            exit();
         }
     }
 

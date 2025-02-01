@@ -1,7 +1,7 @@
 <?php
 require_once('funciones.php');
 
-class Registrar{
+class Register{
 
     private $email;
     private $contra;
@@ -41,11 +41,13 @@ class Registrar{
     }
 
     private function crear_usuario(){
-        $stmt = $this->conn->prepare('INSERT INTO usuarios (email, contra) VALUES (:email,:contra)');
-        $stmt->bindParam(':email',$this->email);
-        $stmt->bindParam(':contra',$this->contra);
-
-        $stmt->execute();
+            $stmt = $this->conn->prepare(
+                'INSERT INTO usuarios (email, contra) VALUES (:email, :contra)'
+            );
+            $stmt->bindParam(':email', $this->email);
+            $stmt->bindParam(':contra', $this->contra);
+    
+            $stmt->execute();
     }
 
     public function obtener_confirmacion(){

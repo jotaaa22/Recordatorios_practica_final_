@@ -15,10 +15,11 @@ function conexionBD(){
     $nombreBD = 'recordatorios_web';
     $usuario = 'root';
     $contra = '';
-    $hostBD = 'mysql:host='.$host.';dbname='.$nombreBD.';';
+    $dsn = "mysql:host=$host;dbname=$nombreBD;charset=utf8mb4";
+
 
     try {
-        $conn = new PDO($host, $usuario, $contra);
+        $conn = new PDO($dsn, $usuario, $contra);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         return $conn;

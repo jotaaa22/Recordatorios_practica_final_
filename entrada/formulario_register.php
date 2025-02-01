@@ -2,7 +2,7 @@
 require_once('C:/Users/jonat/Downloads/xampp/htdocs/recordatorios/funciones/Register.class.php');
 
 if(isset($_POST['email']) && isset($_POST['contra'])){
-    $registro = new Registrar($_POST['email'], $_POST['contra']);
+    $registro = new Register($_POST['email'], $_POST['contra']);
     $resultado = $registro->obtener_confirmacion();
 }
 ?>
@@ -11,7 +11,6 @@ if(isset($_POST['email']) && isset($_POST['contra'])){
 <html>
 <head>
     <title>REGISTRO</title>
-    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -29,8 +28,8 @@ if(isset($_POST['email']) && isset($_POST['contra'])){
             <input type="email" name="email" id="email" placeholder="Escribe tu email">
         </div>
         <div class="input-form">
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" id="password" placeholder="Escribe tu contraseña">
+            <label for="contra">Contraseña:</label>
+            <input type="password" name="contra" id="contra" placeholder="Escribe tu contraseña">
         </div>
             <button type="submit" form="login-form" value="Submit">Registrarse</button>
         <?php
